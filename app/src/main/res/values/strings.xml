@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Tom And Jerry</string>
+    <string name="profile_image">Profile Image</string>
+    <string name="which_tom_do_you_want_to_buy">Which Tom do you want to buy?</string>
+    <string name="buy_1_tom_and_get_2_for_free">Buy 1 Tom and get 2 for free</string>
+    <string name="high_tension">High tension</string>
+    <string name="shocking_foods">Shocking foods</string>
+    <string name="electric_tom_pasta">Electric Tom pasta</string>
+</resources>
