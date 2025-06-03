@@ -48,7 +48,7 @@ import com.example.tomandjerry.ui.theme.ibmPlexSansArabic
 fun TomAccountScreen() {
     Column (
         modifier = Modifier
-            .padding(top = 16.dp)
+            //.padding(top = 16.dp)
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
     ) {

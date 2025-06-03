@@ -16,8 +16,8 @@ import com.example.tomandjerry.screens.tomKitchen.TomKitchenScreen
 fun RunApp() {
     Scaffold() { innerPadding ->
         Box(modifier = Modifier.fillMaxSize().padding(innerPadding)) {
-            JerryStoreScreen()
-            //TomKitchenScreen()
+            //JerryStoreScreen()
+            TomKitchenScreen()
             //TomAccountScreen()
         }
     }

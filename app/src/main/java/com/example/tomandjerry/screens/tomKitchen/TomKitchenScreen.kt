@@ -151,7 +151,7 @@ fun TomKitchenScreen() {
                         Spacer(modifier = Modifier.height(8.dp))
 
                         Text(
-                            text = "Pasta cooked with a charger cable and sprinkled with questionable cheese. Make sure to unplug it before eating (or not, you decide).",
+                            text = "Pasta cooked with a charger cable and\nsprinkled with questionable cheese. Make sure\nto unplug it before eating (or not, you decide).",
                             color = CodGray60,
                             fontFamily = ibmPlexSansArabic,
                             fontWeight = FontWeight.Medium,
