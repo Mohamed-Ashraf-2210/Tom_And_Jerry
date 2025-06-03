@@ -25,7 +25,7 @@ fun JerryStoreScreen() {
         modifier = Modifier
             .background(color = AquaHaze)
             .padding(horizontal = 16.dp)
-            //.padding(top = 12.dp)
+            .padding(top = 12.dp)
     ) {
         AppBar(name = "Jerry")
         Spacer(modifier = Modifier.height(12.dp))

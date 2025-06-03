@@ -1,6 +1,7 @@
 package com.example.tomandjerry.screens.tomAccount.composables
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
@@ -37,17 +38,17 @@ fun TomAccountCard(
             Image(
                 painter = painterResource(id = icon),
                 contentDescription = null,
-                modifier = Modifier.size(40.dp)
+                modifier = Modifier.size(48.dp)
             )
 
-            Column(modifier = Modifier.padding(start = 10.dp)) {
+            Column(modifier = Modifier.padding(start = 10.dp), verticalArrangement = Arrangement.Center) {
                 Text(
                     text = text,
                     color = CodGray60,
                     fontFamily = ibmPlexSansArabic,
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 16.sp,
-                    letterSpacing = 0.5.sp
+                    letterSpacing = 0.5.sp,
                 )
                 Text(
                     text = description,
@@ -55,7 +56,7 @@ fun TomAccountCard(
                     fontFamily = ibmPlexSansArabic,
                     fontWeight = FontWeight.Medium,
                     fontSize = 12.sp,
-                    letterSpacing = 0.5.sp
+                    letterSpacing = 0.5.sp,
                 )
             }
         }

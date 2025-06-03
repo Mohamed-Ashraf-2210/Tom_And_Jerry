@@ -25,19 +25,21 @@ import com.example.tomandjerry.ui.theme.ibmPlexSansArabic
 @Composable
 fun DetailsCard(image: Int, title: String, description: String) {
     Card(
-        modifier = Modifier.width(104.dp),
+        modifier = Modifier.width(110.dp),
         shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(containerColor = LinkWater)
     ) {
         Column(
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(12.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
             Image(
                 painter = painterResource(id = image),
                 contentDescription = null,
-                modifier = Modifier.padding(vertical = 12.dp)
+                modifier = Modifier.padding(bottom = 12.dp)
             )
 
             Text(
@@ -56,7 +58,7 @@ fun DetailsCard(image: Int, title: String, description: String) {
                 fontWeight = FontWeight.Medium,
                 fontSize = 12.sp,
                 lineHeight = 16.sp,
-                modifier = Modifier.padding(bottom = 12.dp)
+                // modifier = Modifier.padding(bottom = 12.dp)
             )
         }
 

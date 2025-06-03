@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
@@ -22,7 +23,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -54,23 +54,18 @@ fun TomKitchenScreen() {
                 .verticalScroll(rememberScrollState())
         ) {
             Box(
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(VeniceBlue.copy(alpha = 0.5f))
             ) {
-
-                Image(
-                    painter = painterResource(id = R.drawable.background_shape_tom_kitchen),
-                    contentDescription = null,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .graphicsLayer(scaleX = 2f, scaleY = 2f)
-                )
 
                 Image(
                     painter = painterResource(id = R.drawable.ellipse_3_tom_kitchen),
                     contentDescription = null,
+                    modifier = Modifier.offset(y = -16.dp)
                 )
 
-                Column(modifier = Modifier.padding(start = 16.dp, top = 40.dp)) {
+                Column(modifier = Modifier.padding(start = 16.dp, top = 56.dp)) {
                     Row(modifier = Modifier.padding(bottom = 16.dp)) {
                         Icon(
                             painter = painterResource(id = R.drawable.high_tension_icon),

@@ -37,3 +37,4 @@ val Tuatara15 = Color(0x261F1F1E)
 
 // shadow
 val NightRider = Color(0x1F0D0608)
+val DividerColor = Color(0x14001A1F)

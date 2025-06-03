@@ -40,4 +40,5 @@ val ibmPlexSansArabic = FontFamily(
     Font(R.font.ibm_plex_sans_arabic, FontWeight.Normal),
     Font(R.font.ibm_plex_sans_arabic_medium, FontWeight.Medium),
     Font(R.font.ibm_plex_sans_arabic_semibold, FontWeight.SemiBold),
+    Font(R.font.ibm_plex_sans_arabic_bold, FontWeight.Bold),
 )
