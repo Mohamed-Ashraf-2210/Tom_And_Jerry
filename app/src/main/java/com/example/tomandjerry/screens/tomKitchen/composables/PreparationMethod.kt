@@ -37,7 +37,7 @@ fun PreparationMethod(number: String, description: String) {
             modifier = Modifier
                 .fillMaxSize()
                 .padding(start = 20.dp),
-            shape = RoundedCornerShape(12.dp),
+            shape = RoundedCornerShape(topEnd = 12.dp, bottomEnd = 12.dp),
             colors = CardDefaults.cardColors(containerColor = White)
         ) {
             Text(

@@ -25,7 +25,7 @@ import com.example.tomandjerry.ui.theme.ibmPlexSansArabic
 @Composable
 fun DetailsCard(image: Int, title: String, description: String) {
     Card(
-        modifier = Modifier.width(110.dp),
+        modifier = Modifier.width(104.dp),
         shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(containerColor = LinkWater)
     ) {

@@ -20,6 +20,9 @@ val JellyBean = Color(0xFF226993)
 val ChromeWhite = Color(0xFFDEEECD)
 val VanillaIce = Color(0xFFF2D9E7)
 val Champagne = Color(0xFFFAEDCF)
+val AzureRadiance = Color(0xFF0085E3)
+val Orient = Color(0xFF00497D)
+val Anakiwa = Color(0xFFA3DCFF)
 
 
 // color text

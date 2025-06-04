@@ -26,12 +26,11 @@ import com.example.tomandjerry.ui.theme.VeniceBlue
 import com.example.tomandjerry.ui.theme.ibmPlexSansArabic
 
 @Composable
-fun CheesesBox(colorBox: Color, verticalPadding: Int, horizontalPadding: Int, oldPrice: String, newPrice: String, modifier: Modifier = Modifier) {
+fun CheesesBox(colorBox: Color,oldPrice: String, newPrice: String, modifier: Modifier = Modifier) {
     Box(
         modifier = modifier
             .clip(RoundedCornerShape(8.dp))
-            .background(color = colorBox)
-            .padding(vertical = verticalPadding.dp, horizontal = horizontalPadding.dp),
+            .background(color = colorBox)         ,
         contentAlignment = Alignment.Center
     ) {
         Row(horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically) {

@@ -123,21 +123,21 @@ fun TomKitchenScreen() {
                                     fontFamily = ibmPlexSansArabic,
                                     fontWeight = FontWeight.Medium,
                                     fontSize = 20.sp,
+                                    lineHeight = 32.sp,
                                 )
                                 Spacer(modifier = Modifier.height(12.dp))
                                 CheesesBox(
                                     colorBox = LinkWater,
-                                    verticalPadding = 7,
-                                    horizontalPadding = 7,
                                     oldPrice = "0",
-                                    newPrice = "5"
+                                    newPrice = "5",
+                                    modifier = Modifier.size(width = 91.dp, height = 30.dp)
                                 )
                             }
                             Spacer(modifier = Modifier.weight(1f))
 
                             Icon(
                                 modifier = Modifier.padding(top = 25.dp),
-                                painter = painterResource(id = R.drawable.baseline_favorite_24),
+                                painter = painterResource(id = R.drawable.favorite_icon),
                                 contentDescription = null,
                                 tint = VeniceBlue
                             )

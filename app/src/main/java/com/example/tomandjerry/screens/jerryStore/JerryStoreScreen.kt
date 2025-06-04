@@ -24,17 +24,22 @@ fun JerryStoreScreen() {
     Column(
         modifier = Modifier
             .background(color = AquaHaze)
-            .padding(horizontal = 16.dp)
-            .padding(top = 12.dp)
+            .padding(top = 6.dp)
     ) {
-        AppBar(name = "Jerry")
-        Spacer(modifier = Modifier.height(12.dp))
-        SearchBarContainer()
-        Spacer(modifier = Modifier.height(8.dp))
-        PromotionBanner()
-        Spacer(modifier = Modifier.height(24.dp))
+        Column(
+            modifier = Modifier
+                .padding(horizontal = 16.dp)
+        ) {
+            AppBar(name = "Jerry")
+            Spacer(modifier = Modifier.height(16.dp))
+            SearchBarContainer()
+            Spacer(modifier = Modifier.height(8.dp))
+            PromotionBanner()
+            Spacer(modifier = Modifier.height(24.dp))
+        }
         CheapTom()
     }
+
 }
 
 
