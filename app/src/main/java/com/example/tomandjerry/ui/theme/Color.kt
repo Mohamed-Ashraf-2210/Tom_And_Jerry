@@ -23,6 +23,9 @@ val Champagne = Color(0xFFFAEDCF)
 val AzureRadiance = Color(0xFF0085E3)
 val Orient = Color(0xFF00497D)
 val Anakiwa = Color(0xFFA3DCFF)
+val DoublePearlLusta = Color(0xFFFCF2C5)
+val Cupid = Color(0xFFFCC5E4)
+val FrenchPass = Color(0xFFC5E7FC)
 
 
 // color text

@@ -20,8 +20,8 @@ fun RunApp() {
         ) {
             //JerryStoreScreen()
             //TomKitchenScreen()
-            TomAccountScreen()
-            //SecretEpisode()
+            //TomAccountScreen()
+            SecretEpisode()
         }
     }
 }

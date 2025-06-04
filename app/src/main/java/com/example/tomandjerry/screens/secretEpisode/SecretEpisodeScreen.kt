@@ -2,6 +2,7 @@ package com.example.tomandjerry.screens.secretEpisode
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -12,8 +13,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -28,14 +30,18 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.tomandjerry.R
 import com.example.tomandjerry.screens.composables.RowTitleWithViewAll
+import com.example.tomandjerry.screens.secretEpisode.composables.MostWatchedCard
 import com.example.tomandjerry.screens.secretEpisode.composables.PopularCharacterCard
 import com.example.tomandjerry.ui.theme.Anakiwa
 import com.example.tomandjerry.ui.theme.AquaHaze
 import com.example.tomandjerry.ui.theme.AzureRadiance
-import com.example.tomandjerry.ui.theme.ChromeWhite
+import com.example.tomandjerry.ui.theme.Cupid
+import com.example.tomandjerry.ui.theme.DoublePearlLusta
+import com.example.tomandjerry.ui.theme.FrenchPass
 import com.example.tomandjerry.ui.theme.Orient
 import com.example.tomandjerry.ui.theme.Tuatara
 import com.example.tomandjerry.ui.theme.ibmPlexSansArabic
+import com.example.tomandjerry.ui.theme.roboto
 
 @Composable
 fun SecretEpisode() {
@@ -51,9 +57,30 @@ fun SecretEpisode() {
             .height(432.dp)
     )
 
-    Column(modifier = Modifier.padding(top = 12.dp)) {
+    val gradientColors = listOf(
+        AquaHaze,
+        AquaHaze.copy(alpha = 0f)
+    )
+    Box(
+        modifier = Modifier
+            .padding(top = 225.dp)
+            .background(
+                brush = Brush.verticalGradient(
+                    colors = gradientColors,
+                    endY = 0f,
+                    startY = Float.POSITIVE_INFINITY,
+                )
+            )
+            .fillMaxWidth()
+            .height(207.dp)
+    )
+    Column(modifier = Modifier.verticalScroll(state = rememberScrollState())) {
+
+        Column(modifier = Modifier.padding(top = 12.dp)) {
             Row(
-                modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 Image(
@@ -76,8 +103,6 @@ fun SecretEpisode() {
                                 end = Offset(Float.POSITIVE_INFINITY, Float.POSITIVE_INFINITY)
                             )
                         )
-                    //.blur(12.dp)
-                    //.offset(x = 2.dp, y = 4.dp)
                 ) {
                     Image(
                         painter = painterResource(R.drawable.search_status),
@@ -134,9 +159,68 @@ fun SecretEpisode() {
 
             Spacer(modifier = Modifier.height(12.dp))
 
-        PopularCharacterCard(image = R.drawable.tom_head, title = "Tom", subtitle = "Jerry", colorCard = ChromeWhite)
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .horizontalScroll(state = rememberScrollState())
+            ) {
+                Spacer(modifier = Modifier.padding(start = 16.dp))
+                MostWatchedCard(
+                    image = R.drawable.mostwatched1,
+                    title = "Number 404 - The Cursed\nCheese \uD83E\uDDC0"
+                )
+                Spacer(modifier = Modifier.padding(start = 12.dp))
+                MostWatchedCard(
+                    image = R.drawable.mostwatched2,
+                    title = "Chase on the moon \uD83C\uDF15\n"
+                )
+                Spacer(modifier = Modifier.padding(start = 16.dp))
+            }
+
+            Spacer(modifier = Modifier.height(24.dp))
+            Text(
+                text = "Popular character",
+                color = Tuatara.copy(alpha = 0.87f),
+                fontFamily = roboto,
+                fontWeight = FontWeight.Bold,
+                fontSize = 20.sp,
+                lineHeight = 20.sp,
+                letterSpacing = 0.25.sp,
+                modifier = Modifier.padding(horizontal = 16.dp)
+            )
+
+            Row(
+                modifier = Modifier
+                    .padding(top = 12.dp)
+                    .fillMaxWidth()
+                    .horizontalScroll(state = rememberScrollState())
+            ) {
+                Spacer(modifier = Modifier.padding(start = 16.dp))
+                PopularCharacterCard(
+                    image = R.drawable.tom_head,
+                    title = "Tom",
+                    subtitle = "Failed stalker",
+                    colorCard = DoublePearlLusta
+                )
+                Spacer(modifier = Modifier.padding(start = 8.dp))
+                PopularCharacterCard(
+                    image = R.drawable.jerry_head,
+                    title = "Jerry",
+                    subtitle = "A scammer mouse",
+                    colorCard = Cupid
+                )
+                Spacer(modifier = Modifier.padding(start = 8.dp))
+                PopularCharacterCard(
+                    image = R.drawable.jerry_head_2,
+                    title = "Jerry",
+                    subtitle = "Hungry mouse",
+                    colorCard = FrenchPass
+                )
+                Spacer(modifier = Modifier.padding(start = 16.dp))
+            }
+            Spacer(modifier = Modifier.height(84.dp))
+            Spacer(modifier = Modifier.weight(1f))
+        }
 
     }
-
-
 }
