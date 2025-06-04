@@ -5,6 +5,7 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -62,8 +63,8 @@ fun TomAccountScreen() {
                 contentDescription = null,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .offset(y = -20.dp)
-                    .graphicsLayer(scaleX = 1.3f)
+                    .offset(y = (-56).dp, x = 20.dp)
+                    .graphicsLayer(scaleX = 1.5f, scaleY = 1.5f)
             )
 
             Column(
@@ -99,14 +100,16 @@ fun TomAccountScreen() {
                     fontFamily = ibmPlexSansArabic,
                     fontWeight = FontWeight.Normal,
                     fontSize = 12.sp,
+                    modifier = Modifier.padding(bottom = 4.dp)
                 )
 
                 Button(
                     onClick = {},
                     modifier = Modifier
-                        .clip(RoundedCornerShape(40.dp))
-                        .padding(bottom = 8.dp),
-                    colors = ButtonDefaults.buttonColors(White.copy(alpha = 0.12F))
+                        .size(width = 97.dp, height = 25.dp)
+                        .clip(RoundedCornerShape(40.dp)),
+                    colors = ButtonDefaults.buttonColors(White.copy(alpha = 0.12F)),
+                    contentPadding = PaddingValues(0.dp)
                 ) {
                     Text(
                         text = "Edit foolishness",
@@ -116,6 +119,7 @@ fun TomAccountScreen() {
                         fontSize = 10.sp,
                     )
                 }
+                Spacer(modifier = Modifier.height(8.dp))
 
                 Card(
                     modifier = Modifier.fillMaxWidth(),

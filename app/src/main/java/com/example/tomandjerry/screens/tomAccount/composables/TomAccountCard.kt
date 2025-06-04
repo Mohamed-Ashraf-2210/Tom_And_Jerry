@@ -12,6 +12,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
@@ -32,13 +33,13 @@ fun TomAccountCard(
     Card(
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(containerColor = colorCard),
-        modifier = Modifier.width(170.dp)
+        modifier = Modifier.width(160.dp)
     ) {
-        Row(modifier = Modifier.padding(top = 9.dp, bottom = 9.dp, start = 12.dp, end = 10.dp)) {
+        Row(modifier = Modifier.padding(top = 9.dp, bottom = 9.dp, start = 12.dp, end = 10.dp), horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically) {
             Image(
                 painter = painterResource(id = icon),
                 contentDescription = null,
-                modifier = Modifier.size(48.dp)
+                modifier = Modifier.size(40.dp)
             )
 
             Column(modifier = Modifier.padding(start = 10.dp), verticalArrangement = Arrangement.Center) {
