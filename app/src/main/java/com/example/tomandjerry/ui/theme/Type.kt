@@ -43,4 +43,5 @@ val ibmPlexSansArabic = FontFamily(
     Font(R.font.ibm_plex_sans_arabic_bold, FontWeight.Bold),
 )
 
-val roboto = FontFamily(Font(R.font.roboto_bold, FontWeight.Bold))
+val roboto =
+    FontFamily(Font(R.font.roboto_bold, FontWeight.Bold), Font(R.font.roboto, FontWeight.Normal))

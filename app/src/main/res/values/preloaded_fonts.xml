@@ -5,6 +5,7 @@
         <item>@font/ibm_plex_sans_arabic_bold</item>
         <item>@font/ibm_plex_sans_arabic_medium</item>
         <item>@font/ibm_plex_sans_arabic_semibold</item>
+        <item>@font/roboto</item>
         <item>@font/roboto_bold</item>
     </array>
 </resources>

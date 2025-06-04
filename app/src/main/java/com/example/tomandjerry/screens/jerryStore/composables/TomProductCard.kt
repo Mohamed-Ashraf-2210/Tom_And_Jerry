@@ -71,6 +71,7 @@ fun TomProductCard(
                         fontSize = 12.sp,
                         overflow = TextOverflow.Ellipsis,
                         textAlign = TextAlign.Center,
+                        lineHeight = 16.sp
                     )
                 }
 

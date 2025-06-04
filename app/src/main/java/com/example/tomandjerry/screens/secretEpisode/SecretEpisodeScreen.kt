@@ -40,7 +40,6 @@ import com.example.tomandjerry.ui.theme.DoublePearlLusta
 import com.example.tomandjerry.ui.theme.FrenchPass
 import com.example.tomandjerry.ui.theme.Orient
 import com.example.tomandjerry.ui.theme.Tuatara
-import com.example.tomandjerry.ui.theme.ibmPlexSansArabic
 import com.example.tomandjerry.ui.theme.roboto
 
 @Composable
@@ -124,20 +123,22 @@ fun SecretEpisode() {
                     Text(
                         text = "Deleted episodes of Tom\nand Jerry!",
                         color = Tuatara.copy(alpha = 0.87f),
-                        fontFamily = ibmPlexSansArabic,
-                        fontWeight = FontWeight.SemiBold,
+                        fontFamily = roboto,
+                        fontWeight = FontWeight.Bold,
                         lineHeight = 20.sp,
                         fontSize = 18.sp,
+                        letterSpacing = 0.25.sp,
                         modifier = Modifier.padding(top = 33.dp, bottom = 8.dp)
                     )
 
                     Text(
                         text = "Scenes that were canceled for...\nmysterious (and sometimes\nembarrassing) reasons.",
                         color = Tuatara.copy(alpha = 0.6f),
-                        fontFamily = ibmPlexSansArabic,
+                        fontFamily = roboto,
                         fontWeight = FontWeight.Normal,
                         lineHeight = 20.sp,
                         fontSize = 14.sp,
+                        letterSpacing = 0.25.sp,
                     )
                 }
 

@@ -19,9 +19,9 @@ fun RunApp() {
             .padding(innerPadding)
         ) {
             //JerryStoreScreen()
-            //TomKitchenScreen()
+            TomKitchenScreen()
             //TomAccountScreen()
-            SecretEpisode()
+            //SecretEpisode()
         }
     }
 }

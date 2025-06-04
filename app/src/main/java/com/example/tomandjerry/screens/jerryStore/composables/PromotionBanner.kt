@@ -75,6 +75,7 @@ fun PromotionBanner(modifier: Modifier = Modifier) {
                     fontFamily = ibmPlexSansArabic,
                     fontWeight = FontWeight.Normal,
                     fontSize = 12.sp,
+                    lineHeight = 20.sp
                 )
             }
             Image(
